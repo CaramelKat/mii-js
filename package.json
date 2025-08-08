@@ -5,6 +5,7 @@
   "main": "dist/mii.js",
   "scripts": {
     "lint": "npx eslint .",
+    "prepare": "npm run build",
     "build": "npm run lint && npm run clean && npx tsc && npx tsc-alias && npm run copy-files",
     "clean": "npx rimraf ./dist",
     "copy-files": "cp package.json dist/package.json && cp README.md dist/README.md"
